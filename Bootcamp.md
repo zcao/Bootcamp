@@ -1,4 +1,4 @@
-#Programming Bootcamp 
+# Programming Bootcamp 
 
 > This article is is NOT a systematic programming course, but a boot start for initial setup and a taste of things you will encounter during your learning.  
 
@@ -6,7 +6,7 @@
 
 
 
-### Why C#/dotnet?
+## Why C#/dotnet?
 
 * C# is the main language we use in Rave and Ravegarage.
 *  DotNet is a programming platform that's modern and popular, you can write dotnet program with many languages, the most popular is C#
@@ -14,17 +14,18 @@
 
 
 
-### What tools do I need
+## What tools do I need
 
 * [DotNetCore sdk](https://dotnet.microsoft.com/download/dotnet-core/3.1) provides tools to compile and execute your program
 
 * [Visual Studio Code](https://code.visualstudio.com/download) is a free code editor on both Windows and Mac
-  * VS Code does not support C#/.NET out of box, you need to download the extensions. Fortunately this process is very easy.
+
+  >  VS Code does not support C#/.NET out of box, you need to download the extensions. Fortunately this process is very easy.
 * [Visual Studio](https://visualstudio.microsoft.com/downloads/) has free (Community) version too, .Net core/C# is natively supported and the debugging experience is better than VS code, one important feature is that I can modify code during debug and without to restart and recompile the whole project.
 
 
 
-### Terminologies
+## Terminologies
 
 > These are just my descriptions for you to grasp the idea, they may not be very accurate definitions.
 
@@ -39,7 +40,7 @@
 
 
 
-### Setting up VS Code
+## Setting up VS Code
 
 After you install and open VS Code, 
 
@@ -54,7 +55,7 @@ After you install and open VS Code,
 
 
 
-### Hello World project
+## Hello World project
 
 Anywhere in your computer, create a HelloWorld folder. Open a command line in HelloWorld, and type
 
@@ -108,7 +109,7 @@ Now the window will stay.
 
 
 
-### A bit explanation
+## A bit explanation
 
 Here is the code it generates in console template
 
@@ -152,7 +153,7 @@ In C# a method can not exists by its own, it has to sit in a `class` . A class p
 
 
 
-### More output/input
+## More output/input
 
 Now your program prints a line in console window. It's time to learn ways to feed the program.
 
@@ -242,7 +243,7 @@ Note the path in code has double back slashes `\\`, that is because `\` in C# st
 
 
 
-### Debug
+## Debug
 
 We programmers learn from mistakes, and we get to the heart of our mistakes by debug. 
 
@@ -284,7 +285,7 @@ To continue to execute to end, press `F5`
 
 
 
-### A taste of algorithm 
+## A taste of algorithm 
 
 To do a thing in steps, the steps can happen sequentially or contain some loop or can only happen in certain condition. That's all it is for basic algorithm.
 
@@ -381,9 +382,111 @@ for (int i = 0; i < length; i++)
 
 
 
+ **Exercise 1, print any number of starts in a row**
+
+> Note Console.WriteLine() prints out new empty line
+>
+> Console.WriteLine("*")  prints a start and ends with new line
+>
+> Console.Write("*") prints out a start and stays at same line 
+
+```
+Print this:
+***********************
+```
 
 
-### A teste of OOP
+
+You could use 
+
+```C#
+Console.WriteLine("***********************");
+```
+
+But it doesn't stretch well when you want to print different number for starts, or when I need 10023 starts, it's just hard to count.
+
+The right way is :
+
+```C#
+//replace 20 with any number
+
+for (int i = 0; i < 20 ; i++)
+{
+	Console.Write("*");
+}
+```
+
+The number could also come from user input
+
+```C#
+//We assume args has at least 1 string item, and it's a number
+//then use int.Parse() method to convert it to a real integer.
+
+int num = int.Parse(args[0]);
+for (int i = 0; i < num ; i++)
+{
+	Console.Write("*");
+}
+```
+
+
+
+ **Exercise 2, print  triangle of stars**
+
+```
+Print this:
+*
+**
+***
+****
+*****
+******
+*******
+********
+*********
+```
+
+
+
+**Answer**:
+
+```C#
+for (int line = 1; line < 10; line++)
+{
+    for (int i = 0; i < line ; i++)
+    {
+        Console.Write("*");
+    }
+    Console.WriteLine();
+}
+```
+
+
+
+There is a nested for-loop. Each outside loop prints a new line and each inner loops prints some starts, the number of starts is the line number itself.
+
+
+
+ **Exercise 3, print diamond shape of stars**
+
+```
+Print this:
+         *
+        ***
+       *****
+      *******
+     *********
+    ***********
+   *************
+  ***************
+ *****************
+```
+
+
+
+
+
+## A teste of OOP
 
 To be edited......
 
@@ -401,7 +504,7 @@ To be edited......
 
 
 
-### Using Nuget to get Webdriver
+## Using Nuget to get Webdriver
 
 Remember in `Setting up VS Code` section we installed `Nuget Gallery`? 
 
@@ -535,5 +638,6 @@ namespace HelloWorld
 
 
 
-### End 
+## End 
 
+It's the end of this bootcamp but beginning of a new journey.
