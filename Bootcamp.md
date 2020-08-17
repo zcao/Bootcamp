@@ -77,7 +77,7 @@ You can open the otter HelloWorld folder in VS Code, press F5, now VS asks you w
 
 ![F5 and select .net core](images/FirstRun.png)
 
-Will you see the program prints out `Hello World!` among other outputs in different color, to let the output has  separate window, click the `launch.json`
+By default the program prints out `Hello World!` among other outputs , though in different color. To let the program open a separate window, click the `launch.json`
 
 ![internal](images/Output.png)
 
