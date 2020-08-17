@@ -130,11 +130,11 @@ namespace HelloWorld
 
 
 
-Let's start with `Console.WriteLine("Hello World!");` You are using a `C# method` `Console.WriteLine`  in a build-in class `Console`  That `Console` sits inside `System` namespace. A namespace is a way or organized classes and reduce chance of conflict.
+Let's start with `Console.WriteLine("Hello World!");` You are using a  `Console.WriteLine`.  That `Console` class sits inside `System` namespace (so its full name is `System.Console`). A namespace is a way to organize classes and reduce chance of conflict.
 
-If you write a class Cat, so did I, then we you say `Cat`, whose code are you referring to?  If we could put our `Cat` in different namespaces, it will be easier to refer. It's same reason we don't put all files together but in different folders.
+If you and I both write a class called Cat,  then we you say `Cat`, whose version of Cat are you referring to?  If we could put our `Cat` in different namespaces (yours is PetSalon.Cat, mine is Zhan.CityZoo.Cat), it will be easier to refer. 
 
-The full name of Console is `System.Console` but to save typing , we put `using System;` in the first line, so we don't have to type full name in the following code.
+We could type out the full name `System.Console'` whenever we use it or, for lazy people, we put `using System;` on top of file and just use `Console` later.
 
 
 
@@ -142,12 +142,11 @@ Now let's look at the method
 
 ```C#
  static void Main(string[] args)
- {
 ```
 
 
 
-Your project is a console project, which will be compile into exe file (on windows) and when people run the exe, the program has to start somewhere. This `Main` method is called the entry point of the program(by conversion, it has to be this name)
+HelloWorld project is console project which will be compile into exe file (on windows) and when people run the exe, the program needs to start somewhere. This `Main` method provides the entry point by convention.
 
 In C# a method can not exists by its own, it has to sit in a `class` . A class plays very important role in OOP (object oriented programming), however here it along with the namespace just provides a place for Main method to sit in.
 
@@ -221,7 +220,7 @@ Hello Jim Carrey
 
 
 
-* Reading file
+* Input from text file
 
 You can also read file in C#,
 
@@ -322,13 +321,11 @@ if(ifFull){
 
 ```C#
 //for loop
-static void Main(string[] args)
+for (int i = 0; i < 10; i++)
 {
-    for (int i = 0; i < 10; i++)
-    {
-    	Console.WriteLine("Current is on " + i);
-    }
+    Console.WriteLine("Current is on " + i);
 }
+
 ```
 
 Output
@@ -351,7 +348,7 @@ Current is on 9
 
 The `for (int i = 0; i < 10; i++)` means loop the following code x times
 
-Think of it as `for(part1; part2; part3)`, `part1` gets executed once to set initial value, `part2` executes before each loop to evaluate a bool value (true or false), if it's true, then go ahead, otherwise exit for-loop. `part3` executes after each loop body.
+Think of it as `for(part1; part2; part3)`, `part1` gets executed once to set initial value, `part2` executes before each loop to evaluate a bool value (true or false), if it's true, then go ahead execute the body (in curly braces), otherwise exit for-loop. `part3` executes after each loop body.
 
 * first time `i=0` then check if `i<10`,  because 0<10 is true the program continues to print out `Current is on 0`
 * then at the end of first loop, `i++` is equivalent to `i=i+1` , now `i` holds 1
@@ -467,7 +464,7 @@ There is a nested for-loop. Each outside loop prints a new line and each inner l
 
 
 
- **Exercise 3, print diamond shape of stars**
+ **Exercise 3, print Christmas tree shape **
 
 ```
 Print this:
