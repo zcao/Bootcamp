@@ -152,7 +152,7 @@ In C# a method can not exists by its own, it has to sit in a `class` . A class p
 
 
 
-## More output/input
+## More ways input
 
 Now your program prints a line in console window. It's time to learn ways to feed the program.
 
@@ -379,7 +379,7 @@ for (int i = 0; i < length; i++)
 
 
 
- **Exercise 1, print any number of starts in a row**
+ **Exercise 1, print any number of stars in a row**
 
 > Note Console.WriteLine() prints out new empty line
 >
@@ -400,7 +400,7 @@ You could use
 Console.WriteLine("***********************");
 ```
 
-But it doesn't stretch well when you want to print different number for starts, or when I need 10023 starts, it's just hard to count.
+But it doesn't stretch well when you want to print different number for starts, or when I need 10023 stars, it's just hard to count.
 
 The right way is :
 
@@ -460,7 +460,7 @@ for (int line = 1; line < 10; line++)
 
 
 
-There is a nested for-loop. Each outside loop prints a new line and each inner loops prints some starts, the number of starts is the line number itself.
+There is a nested for-loop. Each outside loop prints a new line and each inner loops prints some stars, the number of stars is the line number itself.
 
 
 
@@ -479,11 +479,11 @@ Print this:
  *****************
 ```
 
+> Hint: pint the stars increase by 2 per line first, then try to insert spaces from left.
 
 
 
-
-## A teste of OOP
+## A taste of OOP
 
 To be edited......
 
@@ -501,7 +501,7 @@ To be edited......
 
 
 
-## Using Nuget to get Webdriver
+## Using NuGet to get WebDriver
 
 Remember in `Setting up VS Code` section we installed `Nuget Gallery`? 
 
