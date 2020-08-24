@@ -152,11 +152,11 @@ In C# a method can not exists by its own, it has to sit in a `class` . A class p
 
 
 
-## More ways input
+## More ways of input
 
 Now your program prints a line in console window. It's time to learn ways to feed the program.
 
-* Use `Console.ReadLine();`
+**Use `Console.ReadLine();`**
 
 ```C#
 Console.WriteLine("What's your name?");       
@@ -172,7 +172,7 @@ Then it prints out Hello plus the name user enters.  A `+` sign concatenates 2 s
 
 
 
-*  Use program arguments
+**Use program arguments**
 
 The ` Main(string[] args)` methods accepts an array of string passed in as program arguments. `string[]` means string array.
 
@@ -220,7 +220,7 @@ Hello Jim Carrey
 
 
 
-* Input from text file
+**Input from text file**
 
 You can also read file in C#,
 
@@ -485,7 +485,17 @@ Print this:
 
 ## A taste of OOP
 
-To be edited......
+Before Object Oriented Programing was invented, the common paradigm is Procedure Programming , which has a starting Main method, which calls other methods which call other methods. When there are too many methods you can put them into different files or logical modules. The whole program is designed top down.  **The problem** happens when the program gets complicated, it's hard to keep up. Think about a game, there are players, NPCs, weapons, world objects, bullets, visual effects, and they don't have a fixed timeline to get in or out of stage, it would be much easier if we design them as "objects" and contain the logic in their own classes.
+
+A very good example of OOP is shapes.  We can define a class called Shape
+
+```C#
+interface Shape{
+   double GetArea();
+}
+```
+
+
 
 
 
