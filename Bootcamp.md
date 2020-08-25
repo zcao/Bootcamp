@@ -503,7 +503,7 @@ for (int index = 0; index < word.Length; index++)
     Console.Write(word[index]);
 }
 
-//now you try to print the reverse string using the "faced" , which is "decaf"
+//now you try to print the reverse string using the "faced" which will result in "decaf"
 
 ```
 
