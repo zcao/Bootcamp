@@ -498,7 +498,7 @@ string word = "faced";  //you can also use word: flow
 //Note that a string variable can also be seen as an array of characters, you can access the first char in string using:    word[0]
 
 //this code will print out the whole string, character by character
-for (int index = 0; index < name.Length; index++)
+for (int index = 0; index < word.Length; index++)
 {
     Console.Write(word[index]);
 }
