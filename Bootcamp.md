@@ -284,7 +284,7 @@ To continue to execute to end, press `F5`
 
 
 
-## A taste of algorithm 
+## A taste of algorithm
 
 To do a thing in steps, the steps can happen sequentially or contain some loop or can only happen in certain condition. That's all it is for basic algorithm.
 
@@ -473,7 +473,7 @@ There is a nested for-loop. Each outside loop prints a new line and each inner l
 
 
 
- **Exercise 3, reverse characters in string **
+ **Exercise 3, reverse characters in string**
 
 ```C#
 string word = "faced";  //you can slow use word: flow
