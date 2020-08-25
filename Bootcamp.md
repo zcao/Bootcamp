@@ -292,30 +292,37 @@ To put an elephant in fridge, here are the steps:
 
 *  Cut the elephant in chunks that can fit (array)
 * Open fridge door
-* Loop though all chunks and put them in
-* If fridge in full, close fridge door and get another one
-* Repeat previous 3 steps until no more chunks outside.
-* Close the last fridge's door
+*  for each chunk ( in the array):
+   * put chunk into fridge
+* Close the fridge's door
 
 
+
+The 1st flow control C# statement is `if`
 
 **If statement**
 
 ```C#
 if(true){
-    //everthing happens here will always happen, making the if check useless
+    //everthing here will always happen
+    //  making the check useless
 }
 
-bool ifFull = false; //give its initial value
-//ifFull can be set again according user input or other sources
-if(ifFull){
-    //this is more useful because there is not way to know ifFull is True or False at compile time.
+bool containsX = "execise".Contains("x");
+    
+if(containsX){
+    Console.WriteLine("The word contains x");
+}
+else{  //optionally you can have "else statement"
+    Console.WriteLine("The word does not contain x");
 }
 ```
 
 
 
 
+
+The 2nd flow control statement is `for loop`
 
 **For-loop**
 
@@ -381,11 +388,11 @@ for (int i = 0; i < length; i++)
 
  **Exercise 1, print any number of stars in a row**
 
-> Note Console.WriteLine() prints out new empty line
+> Now we know that `Console.WriteLine()` prints out new empty line
 >
-> Console.WriteLine("*")  prints a start and ends with new line
+> `Console.WriteLine("*")` prints a star and ends with new line
 >
-> Console.Write("*") prints out a start and stays at same line 
+> `Console.Write("*")` prints out a star and stays at same line 
 
 ```
 Print this:
@@ -400,14 +407,15 @@ You could use
 Console.WriteLine("***********************");
 ```
 
-But it doesn't stretch well when you want to print different number for starts, or when I need 10023 stars, it's just hard to count.
+But it doesn't stretch well when you want to print different number for starts, or when I need **1000** stars, it's just hard to count.
 
 The right way is :
 
 ```C#
-//replace 20 with any number
+//Now you can replace 20 with any number
+int numbersToPrint = 20;
 
-for (int i = 0; i < 20 ; i++)
+for (int i = 0; i < numbersToPrint ; i++)
 {
 	Console.Write("*");
 }
@@ -420,6 +428,7 @@ The number could also come from user input
 //then use int.Parse() method to convert it to a real integer.
 
 int num = int.Parse(args[0]);
+
 for (int i = 0; i < num ; i++)
 {
 	Console.Write("*");
@@ -464,48 +473,22 @@ There is a nested for-loop. Each outside loop prints a new line and each inner l
 
 
 
- **Exercise 3, print Christmas tree shape **
-
-```
-Print this:
-         *
-        ***
-       *****
-      *******
-     *********
-    ***********
-   *************
-  ***************
- *****************
-```
-
-> Hint: pint the stars increase by 2 per line first, then try to insert spaces from left.
-
-
-
-## A taste of OOP
-
-Before Object Oriented Programing was invented, the common paradigm is Procedure Programming , which has a starting Main method, which calls other methods which call other methods. When there are too many methods you can put them into different files or logical modules. The whole program is designed top down.  **The problem** happens when the program gets complicated, it's hard to keep up. Think about a game, there are players, NPCs, weapons, world objects, bullets, visual effects, and they don't have a fixed timeline to get in or out of stage, it would be much easier if we design them as "objects" and contain the logic in their own classes.
-
-A very good example of OOP is shapes.  We can define a class called Shape
+ **Exercise 3, reverse characters in string **
 
 ```C#
-interface Shape{
-   double GetArea();
+string word = "faced";  //you can slow use word: flow
+
+//Note that a string variable can also be seen as an array of characters, you can access the first char in string using:    word[0]
+
+//this code will print out the whole string, character by character
+for (int index = 0; index < name.Length; index++)
+{
+    Console.Write(word[index]);
 }
+
+//now you try to print the reverse string using the "faced" , which is "decaf"
+
 ```
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
