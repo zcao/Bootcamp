@@ -324,7 +324,8 @@ if(true){
     //  making the check useless
 }
 
-bool containsX = "execise".Contains("x");
+string word = Console.ReadLine(); //get user input from console
+bool containsX = word.Contains("x");
     
 if(containsX){
     Console.WriteLine("The word contains x");
@@ -492,7 +493,7 @@ There is a nested for-loop. Each outside loop prints a new line and each inner l
  **Exercise 3, reverse characters in string**
 
 ```C#
-string word = "faced";  //you can slow use word: flow
+string word = "faced";  //you can also use word: flow
 
 //Note that a string variable can also be seen as an array of characters, you can access the first char in string using:    word[0]
 
