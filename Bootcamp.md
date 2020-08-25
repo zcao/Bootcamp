@@ -207,16 +207,32 @@ Now if you run, expect to see **Hello Zhan**
 For end users, they are going to use the exe file compile in `HelloWorld\HelloWorld\bin\Debug\netcoreapp3.1` default. They just need to add strings after exe file name in command line.
 
 ```bash
-C:\Desktop\HelloWorld\HelloWorld\bin\Debug\netcoreapp3.1>HelloWorld.exe Jim
+C:\Desktop\HelloWorld\HelloWorld\bin\Debug\netcoreapp3.1>HelloWorld Jim
 Hello Jim
 ```
 
 If there are spaces in the string, you need to put it in double quotes
 
 ```C#
-C:\Desktop\HelloWorld\HelloWorld\bin\Debug\netcoreapp3.1>HelloWorld.exe "Jim Carrey"
+C:\Desktop\HelloWorld\HelloWorld\bin\Debug\netcoreapp3.1>HelloWorld "Jim Carrey"
 Hello Jim Carrey
 ```
+
+
+
+>  Note the actual exaction file name is `HelloWorld.exe` , however in windows when you  just type `HelleWorld Jim`, it will look for exe file, so it's equivalent of typing `HelloWorld.exe Jim`  
+
+
+
+**Mac users:**
+
+On Mac, the actual file name is `HelloWorld` and it is case sensitive. To execute, you need to type
+
+```
+./HelloWorld Jim
+```
+
+
 
 
 
@@ -233,7 +249,7 @@ you read my heart
 `Program.cs`
 
 ```C#
-var text = System.IO.File.ReadAllText("c:\\test.txt");
+var text = System.IO.File.ReadAllText("c:\\test.txt"); 
 Console.WriteLine("file context is " + text);
 Console.ReadLine();
 ```
